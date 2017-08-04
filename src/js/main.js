@@ -4,7 +4,7 @@ $(window).scroll(function(){
     if(scrollTop < 6)
         scrollTop = 6;
 
-	$('.herotext1, .herotext2, h4').css({
+	$('.herotext1, .herotext2, h4, .square1, .square2').css({
 		'opacity': 1 - scrollTop / 200 ,
 		'margin-top' : scrollTop/ 2 + 'px'
 	});
@@ -47,8 +47,35 @@ $(function() {
 });
 
 $('.square1, .square2').hover(function () {
-		$('.homepage').find('.heroimage').css({ 'filter': 'brightness(1)' });
+		$('.homepage').find('.heroimage').addClass('heroimage-animation');
+		$('.square1 .square-header').css({ 'color': '#616161' });
+		$('.square2 .square-header').css({ 'color': '#616161' });
+		$('.square1 .square-desc').css({ 'color': '#616161' });
+		$('.square2 .square-desc').css({ 'color': '#616161' });
 	},
 	function () {
-		$('.homepage').find('.heroimage').css({ 'filter': 'brightness(0.5)' });
+		$('.homepage').find('.heroimage').removeClass('heroimage-animation');
+		$('.square1 .square-header').css({ 'color': '#fff' });
+		$('.square2 .square-header').css({ 'color': '#fff' });
+		$('.square1 .square-desc').css({ 'color': 'transparent' });
+		$('.square2 .square-desc').css({ 'color': 'transparent' });
+    });
+
+$('.square1').hover(function () {
+		$('.square1 .square-header').css({ 'color': '#616161' });
+		$('.square1 .square-desc').css({ 'color': '#616161', 'animation': 'slide-up' });
+
+	},
+	function () {
+		$('.square1 .square-header').css({ 'color': '#fff' });
+		$('.square1 .square-desc').css({ 'color': 'transparent' });
+    });
+
+$('.square2').hover(function () {
+		$('.square2 .square-header').css({ 'color': '#616161' });
+		$('.square2 .square-desc').css({ 'color': '#616161', 'animation': 'slide-up' });
+	},
+	function () {
+		$('.square2 .square-header').css({ 'color': '#fff' });
+		$('.square2 .square-desc').css({ 'color': 'transparent' });
     });
