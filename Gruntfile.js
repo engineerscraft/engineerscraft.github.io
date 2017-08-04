@@ -109,11 +109,9 @@ module.exports = function(grunt) {
 				files: {
 					'js/homepage.min.js': [
 						'node_modules/jquery/dist/jquery.min.js',
-						'node_modules/materialize-css/dist/js/materialize.min.js',
 						'src/js/main.js'],
 					'js/techsnippet.min.js': [
-						'node_modules/jquery/dist/jquery.min.js',
-						'node_modules/materialize-css/dist/js/materialize.min.js']
+						'node_modules/jquery/dist/jquery.min.js']
 				},
 				options: {
 					preserveComments: false

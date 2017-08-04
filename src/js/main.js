@@ -30,13 +30,25 @@ $(window).scroll(function(){
 		$('.brand-logo, .aboutmelink').css({
 			'color': '#fff'		
 		});
+		
+		var svg = $('.social').find('svg path');
+		svg.attr('fill', '#fff');
 	}
-
 });
 
 $(function() {
 	$('.scrollbutton, .aboutmelink, .brand-logo').on('click', function(e) {
 		e.preventDefault();
 		$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-	});
+	});	
+	
+    $('.splitter1').addClass("splitter1-animation"); 
+    $('.splitter2').addClass("splitter2-animation"); 
 });
+
+$('.square1, .square2').hover(function () {
+		$('.homepage').find('.heroimage').css({ 'filter': 'brightness(1)' });
+	},
+	function () {
+		$('.homepage').find('.heroimage').css({ 'filter': 'brightness(0.5)' });
+    });
