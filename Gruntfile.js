@@ -48,7 +48,8 @@ module.exports = function(grunt) {
 				  paths: ['src/less']
 				},
 				files: {
-				  'src/css/main.css': 'src/less/main.less'
+				  'src/css/main.css': 'src/less/main.less',
+				  'src/css/loader.css': 'src/less/loader.less'
 				}
 			}
 		},
@@ -87,6 +88,10 @@ module.exports = function(grunt) {
                     ],
 				dest: 'src/css/caterpillar.css'
 			},
+			loadercss: {
+				src: ['src/css/loader.css'],
+				dest: 'src/css/caterpillar_loader.css'
+			}
 		},
 		postcss: {
 			options: {
@@ -102,6 +107,10 @@ module.exports = function(grunt) {
 			single_file: {
 				src: 'src/css/caterpillar.css',
 				dest: 'css/caterpillar.min.css'
+			},
+			loader_file: {
+				src: 'src/css/caterpillar_loader.css',
+				dest: 'css/caterpillar_loader.min.css'				
 			}
 		},
 		uglify: {
