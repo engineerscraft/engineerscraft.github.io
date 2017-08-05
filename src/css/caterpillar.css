@@ -1230,12 +1230,12 @@ input, select {
 }
 html {
   color: #555;
-  background-color: #e5e5e5;
+  /*background-color: #e5e5e5;*/
   font-size: 18px;
   text-rendering: optimizeLegibility;
   font-family: Nunito, 'arial', sans-serif;
   font-weight: 700;
-  font-size: 100%;
+  font-size: 120%;
 }
 @font-face {
   font-family: Nunito;

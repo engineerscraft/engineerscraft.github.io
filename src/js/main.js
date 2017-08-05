@@ -11,7 +11,7 @@ $(window).scroll(function(){
 		
 	if(scrollTop > 40) {
 		$('.navbar-fixed').css({
-		    'background': '#fff'
+		    'background': '#fff', 'border-bottom': '#e67e22 solid 2px'
 		});
 
 		$('.brand-logo, .aboutmelink').css({
@@ -24,7 +24,8 @@ $(window).scroll(function(){
 	
 	if(scrollTop <= 40) {
 		$('.navbar-fixed').css({
-		    'background': 'transparent'
+		    'background': 'transparent', 
+			'border-bottom': 'transparent solid 2px'
 		});
 
 		$('.brand-logo, .aboutmelink').css({
