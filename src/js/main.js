@@ -62,19 +62,19 @@ $('.square1, .square2').hover(function () {
 
 $('.square1').hover(function () {
 		$('.square1 .square-header').css({ 'color': '#616161' });
-		$('.square1 .square-desc').css({ 'color': '#616161', 'animation': 'slide-up' });
+		$('.square1 .square-desc').css({ 'color': '#616161', 'animation': 'slide-up', 'border-color':'#e67e22' });
 
 	},
 	function () {
 		$('.square1 .square-header').css({ 'color': '#fff' });
-		$('.square1 .square-desc').css({ 'color': 'transparent' });
+		$('.square1 .square-desc').css({ 'color': 'transparent', 'border-color':'transparent' });
     });
 
 $('.square2').hover(function () {
 		$('.square2 .square-header').css({ 'color': '#616161' });
-		$('.square2 .square-desc').css({ 'color': '#616161', 'animation': 'slide-up' });
+		$('.square2 .square-desc').css({ 'color': '#616161', 'animation': 'slide-up', 'border-color':'#e67e22' });
 	},
 	function () {
 		$('.square2 .square-header').css({ 'color': '#fff' });
-		$('.square2 .square-desc').css({ 'color': 'transparent' });
+		$('.square2 .square-desc').css({ 'color': 'transparent', 'border-color':'transparent' });
     });
