@@ -38,7 +38,7 @@ $(window).scroll(function(){
 });
 
 $(function() {
-	$('.scrollbutton, .aboutmelink, .brand-logo').on('click', function(e) {
+	$('.scrollbutton, .aboutmelink, .brand-logo, .square1, .square2').on('click', function(e) {
 		e.preventDefault();
 		$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
 	});	
@@ -49,17 +49,9 @@ $(function() {
 
 $('.square1, .square2').hover(function () {
 		$('.homepage').find('.heroimage').addClass('heroimage-animation');
-		$('.square1 .square-header').css({ 'color': '#616161' });
-		$('.square2 .square-header').css({ 'color': '#616161' });
-		$('.square1 .square-desc').css({ 'color': '#616161' });
-		$('.square2 .square-desc').css({ 'color': '#616161' });
 	},
 	function () {
 		$('.homepage').find('.heroimage').removeClass('heroimage-animation');
-		$('.square1 .square-header').css({ 'color': '#fff' });
-		$('.square2 .square-header').css({ 'color': '#fff' });
-		$('.square1 .square-desc').css({ 'color': 'transparent' });
-		$('.square2 .square-desc').css({ 'color': 'transparent' });
     });
 
 $('.square1').hover(function () {

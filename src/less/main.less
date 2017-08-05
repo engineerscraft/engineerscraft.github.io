@@ -20,6 +20,11 @@ html {
   src: url('../img/Nunito-Regular.ttf');
 }
 
+@font-face {
+  font-family: NunitoBold;
+  src: url('../img/Nunito-Bold.ttf');
+}
+
 h2 {
     font-family: 'lato', 'arial', sans-serif;
     font-weight: 100;
@@ -308,6 +313,7 @@ section {
         background-size: 100% 200%;
         background-position:left bottom;		
 		transition: all .25s ease-in;
+		text-decoration: none;
 	}
 	
 	.square1:hover {
@@ -334,6 +340,7 @@ section {
         background-position:left top;		
 		transition: all .25s ease-in;
 		transform: translate(120px, 120px);
+		text-decoration: none;
 	}
 
 	.square2:hover {
@@ -354,7 +361,7 @@ section {
         padding: 10px;
 		text-align: left;
 		font-size: 70%;
-		font-weight: 700;
+		font-family: NunitoBold;
 	}
 	
 	.square-desc {
@@ -363,8 +370,8 @@ section {
 		padding-top: 40px;
 		text-align: left;
 		font-size: 60%;
-		text-transform: uppercase;
 		line-height: 1.5;
+		font-family: NunitoBold;
 	}
 	
 	@keyframes slide-up {
