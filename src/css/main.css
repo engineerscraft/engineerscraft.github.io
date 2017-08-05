@@ -11,6 +11,7 @@ html {
   font-family: Nunito, 'arial', sans-serif;
   font-weight: 700;
   font-size: 120%;
+  overflow-x: hidden;
 }
 @font-face {
   font-family: Nunito;
