@@ -1461,7 +1461,7 @@ section {
     background: linear-gradient(to bottom, transparent 50%, #fff 50%);
     background-size: 100% 200%;
     background-position: left bottom;
-    transition: all 2s linear;
+    transition: all 1s linear;
   }
   .vertical-line {
     position: absolute;
@@ -1523,7 +1523,7 @@ section {
     background: linear-gradient(to top, transparent 50%, #fff 50%);
     background-size: 100% 200%;
     background-position: left top;
-    transition: all 2s linear;
+    transition: all 1s linear;
   }
   .square1 {
     position: absolute;
