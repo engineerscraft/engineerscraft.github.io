@@ -38,13 +38,16 @@ $(window).scroll(function(){
 });
 
 $(function() {
-	$('.scrollbutton, .aboutmelink, .brand-logo, .square1, .square2').on('click', function(e) {
-		e.preventDefault();
-		$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-	});	
-	
-    $('.splitter1').addClass("splitter1-animation"); 
-    $('.splitter2').addClass("splitter2-animation"); 
+	$(".vertical-line").fadeOut(4000, function() {
+        $(".navbar-fixed, .homepage, section").fadeIn(1000);        
+		$('.scrollbutton, .aboutmelink, .brand-logo, .square1, .square2').on('click', function(e) {
+			e.preventDefault();
+			$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+		});	
+		$('.splitter1').addClass("splitter1-animation"); 
+		$('.splitter2').addClass("splitter2-animation"); 
+		$('.splitter1').css({'border-right': '#aeaeae solid 1px'});
+    });
 });
 
 $('.square1, .square2').hover(function () {
