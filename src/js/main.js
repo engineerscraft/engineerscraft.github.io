@@ -47,14 +47,17 @@ $(function() {
 		$('.splitter1').addClass("splitter1-animation"); 
 		$('.splitter2').addClass("splitter2-animation"); 
 		$('.splitter1').css({'border-right': '#aeaeae solid 1px'});
+		$('.herotext1').addClass('herotext-animation');
     });
 });
 
 $('.square1, .square2').hover(function () {
-		$('.homepage').find('.heroimage').addClass('heroimage-animation');
+		$('.homepage').find('.heroimage').removeClass('heroimage-animation2');
+		$('.homepage').find('.heroimage').addClass('heroimage-animation1');
 	},
 	function () {
-		$('.homepage').find('.heroimage').removeClass('heroimage-animation');
+		$('.homepage').find('.heroimage').addClass('heroimage-animation2');
+		$('.homepage').find('.heroimage').removeClass('heroimage-animation1');
     });
 
 $('.square1').hover(function () {
