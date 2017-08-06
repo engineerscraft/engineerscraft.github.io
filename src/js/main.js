@@ -6,7 +6,6 @@ $(window).scroll(function(){
 
 	$('.herotext1, .herotext2, h4, .square1, .square2').css({
 		'opacity': 1 - scrollTop / 200 ,
-		'margin-top' : scrollTop/ 2 + 'px'
 	});
 		
 	if(scrollTop > 40) {

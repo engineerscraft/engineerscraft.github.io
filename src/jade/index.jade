@@ -22,36 +22,67 @@ html(lang="en")
                 li
                     a.aboutmelink(href='#aboutme') Products
                     a.aboutmelink(href='#aboutme') Services
-        .homepage
+        .homepage#home
             .heroimage
             .splitter1
                 h1.herotext1 Caterpillar 
                 h1.herotext2 Solution
-                h4 We provide technology agnostic IT solutions that are cost-effective yet best-suited to our customers' needs.
+                h4.herotext3 We provide technology agnostic IT solutions that are cost-effective yet best-suited to our customers' needs.
             .vertical-line
             .splitter2
                 a.square1(href="#aboutme")
-                    p.square-header Products
+                    h4.square-header Products
                     p.square-desc Learn more about our products
                 a.square2(href="#aboutme")
                     p.square-header Services
                     p.square-desc Learn more about our services
         section#aboutme.aboutme
             .row
-                h2 Our Products and Services
-            .row.expertiseheader
-                h3 I'm specialized in
-            .row.expertise
-                .col.span_1_of_2
-                    img.backenddev(src="img/iconmonstr-laptop-7.svg")
-                    h3 Back end development
-                    span.horizontal-line
-                    p I have gained much experience in back end development. I have developed applications that process huge volume of data and have a near-real time performance requirements. I am proficient in Java / JEE based technologies, Spring framework, Oracle database, Linux etc.
-                .col.span_1_of_2
-                    img.webdev(src="img/iconmonstr-computer-9.svg")
-                    h3 Web development
-                    span.horizontal-line
-                    p I have moderate experience in web development with basic web design knowledge. I am experienced in HTML5, CSS3, Javascript, Angular 2 etc.
+                h2.services-header Our Products and Services
+            .row
+                .col.span_1_of_3
+                    .col.span_1_of_2
+                        img.services-img(src="img/users.svg")
+                    .col.span_1_of_2
+                        h5.services-subheader HRMS & Payroll
+                        span.horizontal-line
+                        p Our HRMS & Payroll system leverages the best practices of 2017. Please refer to the product road map for feature release milestones.
+                .col.span_1_of_3
+                    .col.span_1_of_2
+                        img.services-img(src="img/tools.svg")
+                    .col.span_1_of_2
+                        h5.services-subheader Inventory
+                        span.horizontal-line
+                        p Our Inventry system leverages the best practices of 2017. Please refer to the product road map for feature release milestones.                .col.span_1_of_3
+                .col.span_1_of_3
+                    .col.span_1_of_2
+                        img.services-img(src="img/credit.svg")
+                    .col.span_1_of_2
+                        h5.services-subheader Accounting
+                        span.horizontal-line
+                        p Our Accounting leverages the best practices of 2017. Please refer to the product road map for feature release milestones.
+            .row
+                .col.span_1_of_3
+                    .col.span_1_of_2
+                        img.services-img(src="img/man.svg")
+                    .col.span_1_of_2
+                        h5.services-subheader Salesforce Management System
+                        span.horizontal-line
+                        p Our Salesforce Management System leverages the best practices of 2017. Please refer to the product road map for feature release milestones.
+                .col.span_1_of_3
+                    .col.span_1_of_2
+                        img.services-img(src="img/tablet-mobile-combo.svg")
+                    .col.span_1_of_2
+                        h5.services-subheader Cloud & App Development
+                        span.horizontal-line
+                        p We develop mobile apps hosted from cloud to provide all time availability and scalability.
+                .col.span_1_of_3
+                    .col.span_1_of_2
+                        img.services-img(src="img/iconmonstr-computer-9.svg")
+                    .col.span_1_of_2
+                        h5.services-subheader Other Services
+                        span.horizontal-line
+                        p We have decade long experience in developing software applications to solve business problems. We have an experienced team of professionals that uses the latest technologies and best practices to deliver custom applications.
         script.
             <!-- Google Analytics -->
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

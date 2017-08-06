@@ -1229,11 +1229,15 @@ input, select {
   box-sizing: border-box;
 }
 html {
-  font-size: 18px;
   text-rendering: optimizeLegibility;
   font-family: Nunito, 'arial', sans-serif;
   font-size: 120%;
   overflow-x: hidden;
+}
+p {
+  font-family: NunitoLight, 'arial', sans-serif;
+  font-size: 100%;
+  text-align: left!important;
 }
 @font-face {
   font-family: Nunito;
@@ -1243,48 +1247,14 @@ html {
   font-family: NunitoExtraBold;
   src: url('../img/Nunito-ExtraBold.ttf');
 }
-h2 {
-  font-weight: 100;
-  font-size: 300%;
-  text-align: center;
-  line-height: 70px;
-}
-h1 {
-  font-family: 'Nunito', sans-serif;
-  font-size: 300%;
-  text-transform: uppercase;
-  word-spacing: 16px;
-  transition: font-size 0.3s;
-}
-h3 {
-  text-transform: uppercase;
-  font-size: 100%;
-  padding: 40px 0;
-  font-weight: 300;
-}
-h4 {
-  position: absolute;
-  font-size: 100%;
-  color: #fff;
-  text-align: left;
-  padding: 0 10%;
-  top: 55%;
-  font-family: Nunito;
-  font-weight: 300;
-  line-height: 140%;
-}
-.expertise h3 {
-  padding: 0;
-}
-.expertiseheader h3 {
-  letter-spacing: 4px;
-  word-spacing: 12px;
-  line-height: 30px;
+@font-face {
+  font-family: NunitoLight;
+  src: url('../img/Nunito-Light.ttf');
 }
 .row {
-  max-width: 1140px;
-  margin: 0 auto;
   width: 100%;
+  display: inline-block;
+  vertical-align: top;
 }
 .default-background {
   background-color: white;
@@ -1328,20 +1298,60 @@ h4 {
 .menu a:active {
   background-color: rgba(0, 0, 0, 0.1);
 }
+.herotext {
+  font-family: NunitoExtraBold;
+  text-align: left;
+  position: absolute;
+  padding: 0 10%;
+  font-size: 300%;
+  text-transform: uppercase;
+  word-spacing: 16px;
+  letter-spacing: 8px;
+}
 .herotext1 {
   font-family: NunitoExtraBold;
-  color: #e67e22;
   text-align: left;
   position: absolute;
-  top: -50%;
   padding: 0 10%;
+  font-size: 300%;
+  text-transform: uppercase;
+  word-spacing: 16px;
+  letter-spacing: 8px;
+  color: #e67e22;
+  top: -50%;
 }
 .herotext2 {
-  color: white;
+  font-family: NunitoExtraBold;
   text-align: left;
   position: absolute;
-  top: 40%;
   padding: 0 10%;
+  font-size: 300%;
+  text-transform: uppercase;
+  word-spacing: 16px;
+  letter-spacing: 8px;
+  color: #fff;
+  top: 40%;
+}
+.herotext3 {
+  position: absolute;
+  font-size: 100%;
+  color: #fff;
+  text-align: left;
+  padding: 0 10%;
+  top: 55%;
+  font-family: Nunito;
+  line-height: 140%;
+}
+.services-header {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  font-family: Nunito;
+  font-size: 120%;
+  text-transform: uppercase;
+  color: #616161;
 }
 .herotext-animation {
   animation-duration: 2s;
@@ -1410,17 +1420,11 @@ section {
 .aboutme p {
   text-align: center;
 }
-.expertise p {
-  line-height: 25px;
-  font-size: 80%;
-  padding: 0 30px 30px 30px;
-}
-.backenddev,
-.webdev {
-  height: 100px;
-  width: 100px;
+.services-img {
+  height: 60px;
+  width: 60px;
   display: block;
-  margin: 0 auto 30px auto;
+  margin: auto;
   opacity: 0.5;
 }
 .horizontal-line {
@@ -1429,7 +1433,7 @@ section {
   height: 1px;
   opacity: 0.5;
   background: #000;
-  margin: 20px auto;
+  margin: 20px 0px;
 }
 .social svg {
   display: inline-block;
@@ -1577,6 +1581,7 @@ section {
     transition: transform 2s;
   }
   .square-header {
+    posiition: relative;
     color: #fff;
     text-transform: uppercase;
     margin-left: 15px;
@@ -1586,6 +1591,7 @@ section {
     font-family: NunitoExtraBold;
   }
   .square-desc {
+    posiition: relative;
     color: transparent;
     margin-left: 15px;
     margin-right: 15px;
@@ -1606,5 +1612,10 @@ section {
       margin-top: 100%;
       height: 100%;
     }
+  }
+  .services-subheader {
+    font-size: 120%;
+    text-aign: left;
+    color: #616161;
   }
 }
