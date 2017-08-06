@@ -118,15 +118,12 @@ p {
   line-height: 140%;
 }
 .services-header {
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: left;
+  text-align: center;
   font-family: Nunito;
   font-size: 120%;
   text-transform: uppercase;
   color: #616161;
+  padding: 40px;
 }
 .herotext-animation {
   animation-duration: 2s;
