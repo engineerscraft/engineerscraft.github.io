@@ -1349,6 +1349,34 @@ p {
   text-transform: uppercase;
   color: #616161;
   padding: 40px;
+  color: #e67e22;
+}
+.feature-section {
+  background: #65878F;
+  padding: 40px 100px 40px 100px;
+  font-family: Nunito-Light;
+  font-size: 80%;
+}
+.feature {
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+  font-family: Nunito-Light;
+  list-style: none;
+}
+.feature:before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 25px;
+  background-image: url('../img/check.svg');
+  padding-right: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.filler-laptop {
+  height: 300px;
+  margin-top: -30px;
+  padding-left: 100px;
 }
 .herotext-animation {
   animation-duration: 2s;
@@ -1394,11 +1422,13 @@ p {
     opacity: 0;
   }
 }
-.aboutme {
+.details {
   top: 100vh;
   position: absolute;
   width: 100%;
-  height: 100vh;
+}
+.details-section {
+  padding: 40px;
 }
 .aboutmelink {
   transition: all .3s;
@@ -1407,9 +1437,6 @@ p {
 }
 .aboutmelink:hover {
   border-top: #e67e22 solid 3px;
-}
-section {
-  padding: 80px 40px;
 }
 .aboutme h3 {
   text-align: center;
