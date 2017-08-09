@@ -1252,7 +1252,11 @@ p {
   src: url('../img/Nunito-Light.ttf');
 }
 .preload {
-  transition: none;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
 }
 .row {
   width: 100%;
