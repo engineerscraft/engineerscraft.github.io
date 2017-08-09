@@ -442,8 +442,41 @@ p {
     padding-left: 20px;
     font-size: 120%;
   }
+  .copyright-text {
+    color: #ababab;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 120%;
+    text-align: center!important;
+  }
   .copyright {
     background: #181818;
     font-size: 80%;
+  }
+  .hide {
+    visibility: hidden;
+  }
+  .scroll-indicator {
+    background-image: url('../img/chevron-thin-down.svg');
+    animation: scroll-animation 2s linear infinite;
+    position: absolute;
+    top: 75vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 40px;
+    width: 40px;
+  }
+  @keyframes scroll-animation {
+    0% {
+      transform: translate(-50%, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, 20px);
+      opacity: 0;
+    }
   }
 }
