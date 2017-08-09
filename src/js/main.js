@@ -44,6 +44,7 @@ $(window).on('load', function(){
 			$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
 		});	
 		$('.hide').removeClass('hide');
+		$('.preload').removeClass('preload');
 		$('.splitter1').addClass("splitter1-animation"); 
 		$('.splitter2').addClass("splitter2-animation"); 
 		$('.splitter1').css({'border-right': '#aeaeae solid 1px'});
