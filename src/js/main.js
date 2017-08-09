@@ -36,7 +36,7 @@ $(window).scroll(function(){
 	}
 });
 
-$(function() {
+$(window).on('load', function(){
 	$(".vertical-line").fadeOut(1000, function() {
         $(".navbar-fixed, .homepage, section").fadeIn(1000);        
 		$('.scrollbutton, .aboutmelink, .brand-logo, .square1, .square2').on('click', function(e) {
