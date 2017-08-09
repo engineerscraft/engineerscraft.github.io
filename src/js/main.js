@@ -48,7 +48,7 @@ $(window).on('load', function(){
 		$('.splitter2').addClass("splitter2-animation"); 
 		$('.splitter1').css({'border-right': '#aeaeae solid 1px'});
 		$('.herotext1').addClass('herotext-animation');
-		$('.preload').removeClass('preload');
+		
     });
 });
 
