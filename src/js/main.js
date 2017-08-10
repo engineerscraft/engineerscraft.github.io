@@ -48,9 +48,9 @@ $(function(){
 		$('.splitter1').css({'border-right': '#aeaeae solid 1px'});
 		$('.herotext1').addClass('herotext-animation');
 		$('.hide').removeClass('hide');
-		$('.splitter1, .splitter2, .square1, .square2').css({
+		/*$('.splitter1, .splitter2, .square1, .square2').css({
 			'transition': 'all 0.5s ease-in'
-		});
+		});*/
 		
     });
 });
