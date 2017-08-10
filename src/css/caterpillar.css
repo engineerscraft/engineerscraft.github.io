@@ -1251,13 +1251,6 @@ p {
   font-family: NunitoLight;
   src: url('../img/Nunito-Light.ttf');
 }
-.preload * {
-  -webkit-transition-property: none;
-  -moz-transition-property: none;
-  -ms-transition-property: none;
-  -o-transition-property: none;
-  transition-property: none;
-}
 .row {
   width: 100%;
   display: inline-block;
@@ -1511,7 +1504,6 @@ p {
     background: linear-gradient(to bottom, transparent 50%, #fff 50%);
     background-size: 100% 200%;
     background-position: left bottom;
-    transition: all 0.5s ease-in;
   }
   .vertical-line {
     position: absolute;
@@ -1573,7 +1565,6 @@ p {
     background: linear-gradient(to top, transparent 50%, #fff 50%);
     background-size: 100% 200%;
     background-position: left top;
-    transition: all 0.5s ease-in;
   }
   .square1 {
     position: absolute;
@@ -1585,7 +1576,6 @@ p {
     background: linear-gradient(to bottom, #fff 50%, transparent 50%);
     background-size: 100% 200%;
     background-position: left bottom;
-    transition: all 0.75s ease-in;
     text-decoration: none;
   }
   .square1:hover {
@@ -1607,7 +1597,6 @@ p {
     background: linear-gradient(to top, #fff 50%, transparent 50%);
     background-size: 100% 200%;
     background-position: left top;
-    transition: all 0.75s ease-in;
     transform: translate(160px, 160px);
     text-decoration: none;
   }

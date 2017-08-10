@@ -7,7 +7,7 @@ html(lang="en")
         meta(name="viewport",content="width=device-width,initial-scale=1")
         link(rel="stylesheet",href="css/caterpillar.min.css")
     body.default-background
-        .navbar-fixed.hide
+        .navbar-fixed
             a.brand-logo(href='#home') Catersol
             .social
                 a(href="mailto:saptarshi.basu@gmail.com")
@@ -24,17 +24,17 @@ html(lang="en")
                     a.aboutmelink(href='#services') Services
                     a.aboutmelink(href='#about-us') About Us
         .homepage#home
-            .heroimage
-            .splitter1
+            .heroimage.hide
+            .splitter1.hide
                 h1.herotext1 Caterpillar 
                 h1.herotext2 Solution
                 h4.herotext3 We provide technology agnostic IT solutions that are cost-effective yet best-suited to our customers' needs.
             .vertical-line
-            .splitter2
-                a.square1(href="#products").hide.preload
+            .splitter2.hide
+                a.square1(href="#products")
                     h4.square-header Products
                     p.square-desc Learn more about our products
-                a.square2(href="#services").hide.preload
+                a.square2(href="#services")
                     p.square-header Services
                     p.square-desc Learn more about our services
             a.scroll-indicator(href="#products")
