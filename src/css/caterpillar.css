@@ -1281,20 +1281,16 @@ p {
   text-align: left;
   position: absolute;
   padding: 0 10%;
-  font-size: 200%;
+  font-size: 150%;
   text-transform: uppercase;
-  word-spacing: 16px;
-  letter-spacing: 8px;
 }
 .herotext1 {
   font-family: NunitoExtraBold;
   text-align: left;
   position: absolute;
   padding: 0 10%;
-  font-size: 200%;
+  font-size: 150%;
   text-transform: uppercase;
-  word-spacing: 16px;
-  letter-spacing: 8px;
   color: #e67e22;
   top: -50%;
 }
@@ -1303,10 +1299,8 @@ p {
   text-align: left;
   position: absolute;
   padding: 0 10%;
-  font-size: 200%;
+  font-size: 150%;
   text-transform: uppercase;
-  word-spacing: 16px;
-  letter-spacing: 8px;
   color: #fff;
   top: 40%;
 }
