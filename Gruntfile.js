@@ -118,9 +118,7 @@ module.exports = function(grunt) {
 				files: {
 					'js/homepage.min.js': [
 						'node_modules/jquery/dist/jquery.min.js',
-						'src/js/main.js'],
-					'js/techsnippet.min.js': [
-						'node_modules/jquery/dist/jquery.min.js']
+						'src/js/main.js']
 				},
 				options: {
 					preserveComments: false

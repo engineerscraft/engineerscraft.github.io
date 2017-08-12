@@ -39,7 +39,7 @@ p {
 }
 .navbar-fixed {
   background: transparent;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   width: 100%;
   height: 62px;
@@ -106,7 +106,7 @@ p {
 }
 .feature-section {
   background: #202020;
-  padding: 40px 100px 40px 100px;
+  padding: 40px;
   font-family: Nunito-Light;
   font-size: 80%;
 }
@@ -140,9 +140,7 @@ p {
   background-repeat: no-repeat;
 }
 .filler-laptop {
-  height: 300px;
-  margin-top: -30px;
-  padding-left: 100px;
+  display: none;
 }
 .herotext-animation {
   animation-duration: 2s;
@@ -227,6 +225,7 @@ p {
 }
 .social {
   position: absolute;
+  width: 100%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -250,8 +249,52 @@ p {
 }
 .splitter2 {
   display: none;
+  position: relative;
+}
+.vertical-line {
+  display: none;
+}
+.services-subheader {
+  font-size: 120%;
+  text-aign: left;
+  color: #616161;
+}
+.footer-header {
+  color: #fff;
+  font-size: 120%;
+  font-family: NunitoExtraBold;
+  padding: 20px;
+}
+.footer-text {
+  color: #ababab;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 120%;
+}
+.copyright-text {
+  color: #ababab;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 120%;
+  text-align: center!important;
+}
+.copyright {
+  background: #181818;
+  font-size: 80%;
 }
 @media (min-width: 900px) {
+  .filler-laptop {
+    display: inline;
+    height: 300px;
+    margin-top: -30px;
+    padding-left: 100px;
+  }
+  .feature-section {
+    background: #202020;
+    padding: 40px 100px 40px 100px;
+    font-family: Nunito-Light;
+    font-size: 80%;
+  }
   .herotext1 {
     font-family: NunitoExtraBold;
     text-align: left;
@@ -483,34 +526,6 @@ p {
       margin-top: 100%;
       height: 100%;
     }
-  }
-  .services-subheader {
-    font-size: 120%;
-    text-aign: left;
-    color: #616161;
-  }
-  .footer-header {
-    color: #fff;
-    font-size: 120%;
-    font-family: NunitoExtraBold;
-    padding: 20px;
-  }
-  .footer-text {
-    color: #ababab;
-    padding: 10px;
-    padding-left: 20px;
-    font-size: 120%;
-  }
-  .copyright-text {
-    color: #ababab;
-    padding: 10px;
-    padding-left: 20px;
-    font-size: 120%;
-    text-align: center!important;
-  }
-  .copyright {
-    background: #181818;
-    font-size: 80%;
   }
   .hide {
     visibility: hidden;
