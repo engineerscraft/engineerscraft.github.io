@@ -11,7 +11,6 @@ html {
 }
 p {
     font-family: NunitoLight, 'arial', sans-serif;
-    ;
     font-size: 100%;
     text-align: left!important;
 }
@@ -36,9 +35,11 @@ p {
     background-color: white;
     margin: 0;
     padding: 0;
+	width: 100%;
 }
-@font-logo: 'Nunito',
-sans-serif;
+
+@font-logo: 'Nunito', sans-serif;
+
 .navbar-fixed {
     background: transparent;
     position: fixed;
@@ -47,35 +48,15 @@ sans-serif;
     height: 62px;
     transition: all 0.3s;
 }
+
 .brand-logo {
-    float: left;
-    text-decoration: none;
-    color: #fff;
-    line-height: 60px;
-    display: inline-block;
-    padding: 0 10px;
-    transition: all 0.3s;
+    display: none;
 }
-.menu li {
-    float: right;
-    list-style: none;
+
+.menu {
+    display: none;
 }
-.menu a:link,
-.menu a:visited {
-    color: #fff;
-    text-decoration: none;
-    font-size: 80%;
-    display: block;
-    line-height: 60px;
-    display: inline-block;
-    padding: 0 8px;
-    transition: background-color 0.3s;
-    padding: 0 10px;
-}
-.menu a:hover,
-.menu a:active {
-    background-color: rgba(0, 0, 0, 0.1);
-}
+
 .herotext {
     font-family: NunitoExtraBold;
     text-align: left;
@@ -210,14 +191,6 @@ sans-serif;
 .details-section {
     padding: 40px;
 }
-.aboutmelink {
-    transition: all .3s;
-    border-top: transparent solid 3px;
-    text-transform: uppercase;
-}
-.aboutmelink:hover {
-    border-top: #e67e22 solid 3px;
-}
 .aboutme h3 {
     text-align: center;
 }
@@ -258,7 +231,72 @@ sans-serif;
     pointer-events: auto;
     color: white;
 }
-@media only screen and (min-device-width: 700px) {
+
+.splitter1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: transparent;
+    float: left;
+    margin: 0;
+	background: linear-gradient(to bottom, transparent 100%);
+    background-size: 100% 100%;
+}
+
+.splitter2 {
+    display: none;
+}
+
+@media (min-width: 900px) {
+
+    .aboutmelink {
+        transition: all .3s;
+        border-top: transparent solid 3px;
+        text-transform: uppercase;
+    }
+    .aboutmelink:hover {
+        border-top: #e67e22 solid 3px;
+    }
+    .herotext {
+        font-size: 150%;
+    }
+
+    .brand-logo {
+        float: left;
+        text-decoration: none;
+        color: #fff;
+        line-height: 60px;
+        display: inline-block;
+        padding: 0 10px;
+        transition: all 0.3s;
+    }
+
+    .menu li {
+	    display: inline;
+        float: right;
+        list-style: none;
+    }
+    .menu a:link,
+    .menu a:visited {
+	    display: inline;
+        color: #fff;
+        text-decoration: none;
+        font-size: 80%;
+        display: block;
+        line-height: 60px;
+        display: inline-block;
+        padding: 0 8px;
+        transition: background-color 0.3s;
+        padding: 0 10px;
+    }
+    .menu a:hover,
+    .menu a:active {
+	    display: inline;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
     .splitter1 {
         position: absolute;
         top: 0;
@@ -320,8 +358,12 @@ sans-serif;
             height: 0;
         }
     }
+	.menu {
+	    display: inline;
+	}
     .splitter2 {
         position: absolute;
+		display: inline;
         top: 0;
         right: 0;
         height: 100vh;
