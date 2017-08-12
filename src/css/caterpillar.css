@@ -1502,6 +1502,9 @@ p {
   font-size: 80%;
 }
 @media (min-width: 900px) {
+  .social {
+    width: auto;
+  }
   .filler-laptop {
     display: inline;
     height: 300px;
@@ -1572,20 +1575,18 @@ p {
   }
   .menu a:link,
   .menu a:visited {
-    display: inline;
     color: #fff;
     text-decoration: none;
     font-size: 80%;
-    display: block;
-    line-height: 60px;
     display: inline-block;
+    line-height: 59px;
     padding: 0 8px;
     transition: background-color 0.3s;
     padding: 0 10px;
   }
   .menu a:hover,
   .menu a:active {
-    display: inline;
+    display: inline-block;
     background-color: rgba(0, 0, 0, 0.1);
   }
   .splitter1 {

@@ -41,7 +41,7 @@ $(function() {
     if (screen.width > 900) {
         $(".vertical-line").fadeOut(1000, function() {
             $(".navbar-fixed, .homepage, section").fadeIn(1000);
-            $('.scrollbutton, .aboutmelink, .brand-logo, .square1, .square2').on('click', function(e) {
+            $('.aboutmelink, .brand-logo, .square1, .square2, .scroll-indicator').on('click', function(e) {
                 e.preventDefault();
                 $('html, body').animate({
                     scrollTop: $($(this).attr('href')).offset().top
@@ -61,7 +61,7 @@ $(function() {
         });
     } else {
         $('.herotext1').addClass('herotext-animation');
-        $('.scrollbutton, .aboutmelink, .brand-logo, .square1, .square2').on('click', function(e) {
+        $('.aboutmelink, .brand-logo, .square1, .square2, .scroll-indicator').on('click', function(e) {
             e.preventDefault();
             $('html, body').animate({
                 scrollTop: $($(this).attr('href')).offset().top
