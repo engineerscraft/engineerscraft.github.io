@@ -3,12 +3,16 @@ $(window).scroll(function() {
 
     if (scrollTop < 6)
         scrollTop = 6;
+	if (scrollTop <= 200) {
+		$('.herotext1, .herotext2, h4, .square1, .square2').css({
+			'opacity': 1 - scrollTop / 200,
+		});
+	}
 
-    $('.herotext1, .herotext2, h4, .square1, .square2').css({
-        'opacity': 1 - scrollTop / 200,
-    });
-
-    if (scrollTop > 40) {
+    if (scrollTop > 40 && !$('.navbar-fixed').hasClass('gt40')) {
+		
+		$('.navbar-fixed').addClass('gt40');
+		
         $('.navbar-fixed').css({
             'background': '#fff',
             'border-bottom': '#e67e22 solid 2px'
@@ -23,6 +27,9 @@ $(window).scroll(function() {
     }
 
     if (scrollTop <= 40) {
+		
+		$('.navbar-fixed').removeClass('gt40');
+		
         $('.navbar-fixed').css({
             'background': 'transparent',
             'border-bottom': 'transparent solid 2px'
