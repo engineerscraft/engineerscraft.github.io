@@ -1677,7 +1677,7 @@ p {
     width: 160px;
     height: 160px;
     border: #fff solid 2px;
-    background: linear-gradient(to bottom, #fff 50%, transparent 50%);
+    background: linear-gradient(to bottom, #fff 50%, rgba(255, 255, 255, 0) 50%);
     background-size: 100% 200%;
     background-position: left bottom;
     text-decoration: none;
@@ -1698,7 +1698,7 @@ p {
     width: 160px;
     height: 160px;
     border: #fff solid 2px;
-    background: linear-gradient(to top, #fff 50%, transparent 50%);
+    background: linear-gradient(to top, #fff 50%, rgba(255, 255, 255, 0) 50%);
     background-size: 100% 200%;
     background-position: left top;
     transform: translate(160px, 160px);
