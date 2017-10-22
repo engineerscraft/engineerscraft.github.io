@@ -1,55 +1,25 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
-		jade: {
-		  compile: {
-			options: {
-			  pretty: true,
-			},
-			files: [ {
-					  src: "*.jade",
-					  dest: "./",
-					  ext: ".html",
-					  cwd: "src/jade/",
-					  expand: true
-					} ,
-					{
-					  src: "*.jade",
-					  dest: "serverside/",
-					  ext: ".html",
-					  cwd: "src/jade/serverside/",
-					  expand: true
-					} ,
-					{
-					  src: "*.jade",
-					  dest: "clientside/",
-					  ext: ".html",
-					  cwd: "src/jade/clientside/",
-					  expand: true
-					} ,
-					{
-					  src: "*.jade",
-					  dest: "serverside/contents",
-					  ext: ".html",
-					  cwd: "src/jade/serverside/contents",
-					  expand: true
-					} ,
-					{
-					  src: "*.jade",
-					  dest: "clientside/contents",
-					  ext: ".html",
-					  cwd: "src/jade/clientside/contents",
-					  expand: true
-					} ]
-		  }
-		},
-		less: {
-			compile: {
+		  htmlmin: {
+			dist: { 
 				options: {
-				  paths: ['src/less']
+					removeComments: true,
+					collapseWhitespace: true
+				},
+				files: {  
+					'index.html': 'src/index.html'
+				}
+			}
+		  },
+		  imagemin: {
+			static: {
+				options: {
+					optimizationLevel: 3,
+					progressive: true
 				},
 				files: {
-				  'src/css/main.css': 'src/less/main.less',
-				  'src/css/loader.css': 'src/less/loader.less'
+					'img/rawpixel-com-358746-2000x1334.jpg': 'src/img/rawpixel-com-358746-2000x1334.jpg',
+					'img/michele-bergami-314635_withlogo.jpg': 'src/img/michele-bergami-314635_withlogo.jpg'
 				}
 			}
 		},
@@ -61,37 +31,36 @@ module.exports = function(grunt) {
 						src: '*.*',
 						dest: 'img/',
 						expand: true
-					},
-					{
-						cwd: 'src/fonts/',
-						src: '**/*.*',
-						dest: 'fonts/',
-						expand: true
-					},
-					{
-						cwd: 'src/jade/codesnippets/demo',
-						src: '*.*',
-						dest: 'codesnippets/demo/',
-						expand: true
-					}					
+					}
 				]
 			}
+		},
+	multiresize: {
+			hero: {
+				src: 'img/rawpixel-com-358746-2000x1334.jpg',
+				dest: ['img/rawpixel-com-358746-2000x1334-sm.jpg','img/rawpixel-com-358746-2000x1334-lg.jpg'],
+				destSizes: ['500x500', '1024x900']
+			},
+			filler: {
+				src: 'img/michele-bergami-314635_withlogo.jpg',
+				dest: ['img/michele-bergami-314635_withlogo-sm.jpg','img/michele-bergami-314635_withlogo-lg.jpg'],
+				destSizes: ['275x275', '1024x500']
+			},			
 		},
 		concat: {
 			options: {
 			},
 			dist: {
 				src: [
-                    'node_modules/normalize.css/normalize.css',
-                    'vendor/css/responsivegridsystem/*.css',
-                    'src/css/main.css'
+                    'node_modules/bootstrap/dist/css/bootstrap.min.css',
+					'node_modules/bootstrap/dist/css/bootstrap-grid.min.css',
+                    'src/css/caterpillar.css',
+					'src/css/socicon.css',
+					'src/css/theme.css',
+					'src/css/icons.css',
                     ],
-				dest: 'src/css/caterpillar.css'
+				dest: 'src/css/caterpillar_complete.css'
 			},
-			loadercss: {
-				src: ['src/css/loader.css'],
-				dest: 'src/css/caterpillar_loader.css'
-			}
 		},
 		postcss: {
 			options: {
@@ -105,20 +74,20 @@ module.exports = function(grunt) {
 				]
 			},
 			single_file: {
-				src: 'src/css/caterpillar.css',
+				src: 'src/css/caterpillar_complete.css',
 				dest: 'css/caterpillar.min.css'
-			},
-			loader_file: {
-				src: 'src/css/caterpillar_loader.css',
-				dest: 'css/caterpillar_loader.min.css'				
 			}
 		},
 		uglify: {
 			js: {
 				files: {
-					'js/homepage.min.js': [
+					'js/caterpillar.min.js': [
 						'node_modules/jquery/dist/jquery.min.js',
-						'src/js/main.js']
+						'node_modules/smooth-scroll/dist/js/smooth-scroll.min.js',
+						'node_modules/smooth-scroll/dist/js/smooth-scroll.polyfills.min.js',
+						'node_modules/scrollreveal/dist/scrollreveal.min.js',
+						'src/js/caterpillar.js',
+						'src/js/theme.js']
 				},
 				options: {
 					preserveComments: false
@@ -127,12 +96,13 @@ module.exports = function(grunt) {
 		}
     });
 
-	grunt.loadNpmTasks('grunt-contrib-jade');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-postcss');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
-	  
-	grunt.registerTask('build', 'Convert Jade templates into html templates', ['jade','less','copy','concat','postcss','uglify']);
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-multiresize');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.registerTask('build', 'Build the files', ['htmlmin','copy','concat','postcss','uglify','imagemin','multiresize']);
 };
