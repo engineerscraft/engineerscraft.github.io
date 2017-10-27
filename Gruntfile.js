@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 			filler: {
 				src: 'img/michele-bergami-314635_withlogo.jpg',
 				dest: ['img/michele-bergami-314635_withlogo-sm.jpg','img/michele-bergami-314635_withlogo-lg.jpg'],
-				destSizes: ['275x275', '1024x500']
+				destSizes: ['500x500', '1024x500']
 			},			
 		},
 		concat: {
