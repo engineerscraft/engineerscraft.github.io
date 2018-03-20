@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 					progressive: true
 				},
 				files: {
-					'img/rawpixel-com-358746-2000x1334.jpg': 'src/img/rawpixel-com-358746-2000x1334.jpg',
+					'img/heroimage.jpg': 'src/img/heroimage.jpg',
 					'img/michele-bergami-314635_withlogo.jpg': 'src/img/michele-bergami-314635_withlogo.jpg'
 				}
 			}
@@ -37,8 +37,8 @@ module.exports = function(grunt) {
 		},
 	multiresize: {
 			hero: {
-				src: 'img/rawpixel-com-358746-2000x1334.jpg',
-				dest: ['img/rawpixel-com-358746-2000x1334-sm.jpg','img/rawpixel-com-358746-2000x1334-lg.jpg'],
+				src: 'img/heroimage.jpg',
+				dest: ['img/heroimage-sm.jpg','img/heroimage-lg.jpg'],
 				destSizes: ['500x500', '1024x900']
 			},
 			filler: {
